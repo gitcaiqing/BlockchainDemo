@@ -1,12 +1,21 @@
 package com.blockchain.controller;
 
 import com.blockchain.Util.StringUtil;
+import com.blockchain.entity.Block;
 import com.blockchain.entity.Transaction;
+import com.blockchain.entity.TransactionOutput;
 import com.blockchain.entity.Wallet;
 
 import java.security.Security;
+import java.util.*;
 
 public class TestTransaction {
+
+    //维护一个未使用的交易集合
+    public static List<Block> blockArraylist = new ArrayList<Block>(;
+
+    public static Map<String, TransactionOutput> UTXOs = new HashMap<String, TransactionOutput>();
+
 
     public static int diffculty = 3;
     public static Wallet walletA;
